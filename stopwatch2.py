@@ -1,7 +1,6 @@
-from pygments.token import String
 from textual.app import App, ComposeResult
 from textual.containers import HorizontalGroup, VerticalScroll
-from textual.widgets import Button, Digits, Footer, Header, Static
+from textual.widgets import Button, Digits, Footer, Header
 
 
 class TimeDisplay(Digits):
@@ -17,12 +16,12 @@ class Stopwatch(HorizontalGroup):
         yield Button("Stop", id="stop", variant="error")
         yield Button("Reset", id="reset")
         yield TimeDisplay("00:00:00.00")
-        yield Static("Lap")
 
 
 class StopwatchApp(App):
     """A Textual app to manage stopwatches."""
 
+    CSS_PATH = "stopwatch.tcss"
     BINDINGS = [("d", "toggle_dark", "Toggle dark mode"), ("q", "quit", "Quit")]
 
     def compose(self) -> ComposeResult:
