@@ -1,6 +1,6 @@
 from textual.app import App, ComposeResult
-from textual.containers import HorizontalGroup, VerticalScroll
-from textual.widgets import Button, Digits, Footer, Header
+from textual.containers import HorizontalGroup, VerticalScroll, VerticalGroup
+from textual.widgets import Button, Digits, Footer, Header, Static
 
 
 class TimeDisplay(Digits):
@@ -15,7 +15,9 @@ class Stopwatch(HorizontalGroup):
         yield Button("Start", id="start", variant="success")
         yield Button("Stop", id="stop", variant="error")
         yield Button("Reset", id="reset")
-        yield TimeDisplay("00:00:00.00")
+        with VerticalGroup():
+            yield TimeDisplay("00:00:00.00")
+            yield Static("Elapsed time")
 
 
 class StopwatchApp(App):

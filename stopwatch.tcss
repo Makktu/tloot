@@ -1,8 +1,8 @@
 Stopwatch {   
     background: $surface;
-    height: 5;
+    height: 7;
     margin: 1;
-    min-width: 50;
+    min-width: 70;
     padding: 1;
 }
 
@@ -12,8 +12,20 @@ TimeDisplay {
     height: 3;
 }
 
+VerticalGroup {
+    width: 1fr;
+    min-width: 20;
+}
+
 Button {
     width: 16;
+}
+
+Static {
+    width: 100%;
+    text-align: center;
+    color: $foreground-muted;
+    height: 1;
 }
 
 #start {
