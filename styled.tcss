@@ -1,0 +1,20 @@
+Static {
+    background: darkblue;
+    padding: 1 1;
+
+}
+
+#static_id {
+    border: solid white;
+    background: darkred;
+    padding: 1 1;
+    text-align: center;
+}
+
+.static_class1 {
+    background: darkgreen;
+}
+
+.static_class2 {
+    border: dashed yellow;
+}
