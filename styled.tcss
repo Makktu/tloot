@@ -1,6 +1,8 @@
 Static {
     background: darkblue;
     padding: 1 1;
+    text-align: center;
+    font-size: 3em;
 
 }
 
@@ -8,7 +10,6 @@ Static {
     border: solid white;
     background: darkred;
     padding: 1 1;
-    text-align: center;
 }
 
 .static_class1 {
@@ -16,5 +17,5 @@ Static {
 }
 
 .static_class2 {
-    border: dashed yellow;
+    border: dashed white;
 }

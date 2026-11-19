@@ -1,5 +1,5 @@
 from textual.app import App
-from textual.widgets import Static, Label, Footer
+from textual.widgets import Static, Label, Footer, Digits
 
 class HelloApp(App):
     CSS_PATH = "styled.tcss"
@@ -10,6 +10,7 @@ class HelloApp(App):
         yield Static("This is using an id", id="static_id")
         yield Static("First class", classes="static_class1")
         yield Static("Second class", classes="static_class2")
+        yield Digits(1234)
         yield Footer()
 
 
